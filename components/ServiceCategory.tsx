@@ -39,7 +39,7 @@ export default function ServiceCategory({
   return (
     <article
       className={clsx(
-        "flex flex-col gap-4 p-4 border border-t-4 border-b-transparent shadow-2xl hover:border-b-4 w-80  shadow-dark hover:border-t-transparent",
+        "flex flex-col gap-4 p-4 border border-t-4 border-b-4 border-b-transparent shadow-2xl hover:border-b-4 w-80  shadow-dark hover:border-t-transparent",
         Object.values(borderCombo)[index]
       )}
     >

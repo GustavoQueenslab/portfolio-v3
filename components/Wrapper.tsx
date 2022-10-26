@@ -6,7 +6,7 @@ interface WrapperProps {
 
 export default function Wrapper({ children, className = "" }: WrapperProps) {
   return (
-    <div className={clsx("w-full py-10 bg-secondary", className)}>
+    <div className={clsx(className, "w-full py-10 bg-secondary")}>
       {children}
     </div>
   );

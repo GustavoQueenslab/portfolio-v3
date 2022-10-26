@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 import Languages from "../components/Languages";
 import Services from "../components/Services";
+import Certificates from "../components/Certificates";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -21,6 +22,7 @@ function Home(props: any) {
       <Layout>
         <Languages />
         <Services />
+        <Certificates />
       </Layout>
     </>
   );
