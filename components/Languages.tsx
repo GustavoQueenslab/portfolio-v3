@@ -1,18 +1,30 @@
 import LanguageCard from "./LanguageCard";
 import Wrapper from "./Wrapper";
 import LanguagesImages from "../lib/languages";
+import { useState } from "react";
 
 export default function Languages() {
+  const [description, setDescription] = useState("");
   return (
     <Wrapper className="flex flex-col items-center justify-center lg:flex-row">
-      <p className="text-2xl text-primary basis-1/4">Competences</p>
+      <article className="h-3 text-center basis-2/5">
+        <p className="text-2xl text-primary ">Competences</p>
+        <p className="hidden text-xl text-primary lg:block">{description}</p>
+      </article>
       <div className="grid grid-cols-2 mt-8 lg:mt-0 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
         {LanguagesImages.map((card) => (
-          <LanguageCard
-            key={card.id}
-            image={card.path}
-            name={card.name}
-          ></LanguageCard>
+          <>
+            <div
+              onMouseEnter={() => setDescription(card.name)}
+              onMouseLeave={() => setDescription("")}
+            >
+              <LanguageCard
+                key={card.id}
+                image={card.path}
+                name={card.name}
+              ></LanguageCard>
+            </div>
+          </>
         ))}
       </div>
     </Wrapper>
