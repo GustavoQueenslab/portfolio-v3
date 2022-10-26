@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Navbar from "../components/Navbar";
 import Layout from "../components/Layout";
 import Languages from "../components/Languages";
+import Services from "../components/Services";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -19,6 +20,7 @@ function Home(props: any) {
     <>
       <Layout>
         <Languages />
+        <Services />
       </Layout>
     </>
   );
