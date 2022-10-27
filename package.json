@@ -22,7 +22,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^11.18.4",
-    "react-intl": "^6.0.5"
+    "react-intl": "^6.0.5",
+    "react-vanilla-tilt": "^1.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.5",
