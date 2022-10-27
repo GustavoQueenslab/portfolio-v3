@@ -1,1 +1,23 @@
-{ "introduction": "jag heter gustavo", "name": "Gustavo Ferrfeira" }
+{
+  "introduction": "jag heter gustavo",
+  "name": "Gustavo Ferrfeira",
+  "certificates": "Certificates",
+  "certificatesCards": [
+    {
+      "title": "Bachelor's degree",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+      "title": "MTA 98-375",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+      "title": "MTA 98-384",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    },
+    {
+      "title": "Web course",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+    }
+  ]
+}

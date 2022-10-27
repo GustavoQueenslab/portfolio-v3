@@ -1,1 +1,23 @@
-{"introduction":"meu nome é gustavo","name":"Gustavo Ferreira"}
+{
+  "introduction": "meu nome é gustavo",
+  "name": "Gustavo Ferreira",
+  "certificates": "Certificados",
+  "certificatesCards": [
+    {
+      "title": "Tecnologo",
+      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
+    },
+    {
+      "title": "MTA-98-375",
+      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
+    },
+    {
+      "title": "MTA 98-364",
+      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
+    },
+    {
+      "title": "Curso Web",
+      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
+    }
+  ]
+}
