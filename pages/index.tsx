@@ -6,6 +6,7 @@ import Layout from "../components/Layout";
 import Languages from "../components/Languages";
 import Services from "../components/Services";
 import Certificates from "../components/Certificates";
+import Projects from "../components/Projects";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -23,6 +24,7 @@ function Home(props: any) {
         <Languages />
         <Services />
         <Certificates />
+        <Projects />
       </Layout>
     </>
   );

@@ -10,6 +10,8 @@ module.exports = {
         primary: "#FFFFFF",
         secondary: "#2A2D34",
         tertiary: "#2574A9",
+        dhr: "#3F4759",
+        redare: "#1F2937",
       },
     },
   },
