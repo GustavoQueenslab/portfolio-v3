@@ -15,7 +15,6 @@ export default function Certificates() {
   const certificates: CertificatesProps[] = t("home:certificatesCards", {
     returnObjects: true,
   });
-  console.log(certificates);
   return (
     <Wrapper className="flex flex-col items-center justify-center">
       <h3 className="mb-32 text-2xl text-primary">s</h3>

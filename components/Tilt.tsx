@@ -10,6 +10,7 @@ export default function Tilt({ className, children }: TiltProps) {
     <Title
       className={clsx(className, "px-8 py-4 bg-white rounded-md")}
       style={{}}
+      options={{ reverse: true }}
     >
       {children}
     </Title>
