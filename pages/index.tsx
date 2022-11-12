@@ -8,6 +8,7 @@ import Services from "../components/Services";
 import Certificates from "../components/Certificates";
 import Projects from "../components/Projects";
 import Recomendation from "../components/Recommendation";
+import ChatbotButton from "../components/chatbot/ChatbotButton";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -27,6 +28,7 @@ function Home(props: any) {
         <Certificates />
         <Projects />
         <Recomendation />
+        <ChatbotButton />
       </Layout>
     </>
   );

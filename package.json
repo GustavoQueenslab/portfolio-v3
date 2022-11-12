@@ -23,8 +23,11 @@
     "react-dom": "18.2.0",
     "react-i18next": "^11.18.4",
     "react-intl": "^6.0.5",
+    "react-rating-stars-component": "^2.2.0",
+    "react-simple-chatbot": "^0.6.1",
     "react-type-animation": "^2.1.2",
-    "react-vanilla-tilt": "^1.0.0"
+    "react-vanilla-tilt": "^1.0.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/node": "^18.11.5",

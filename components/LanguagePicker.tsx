@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import { useEffect, useRef, useState } from "react";
+import { useOnClickOutside } from "./hooks/OnClickOutside";
 import LanguageOption from "./LanguageOption";
 import LanguagePlaceholder from "./LanguagePlaceholder";
 
@@ -42,22 +43,4 @@ export default function LanguagePicker({ className }: LanguagePickerProps) {
       )}
     </div>
   );
-}
-
-// Hook reference:  https://usehooks.com/useOnClickOutside/
-function useOnClickOutside(ref, handler: (event: Event) => void) {
-  useEffect(() => {
-    const listener = (event) => {
-      if (!ref.current || ref.current.contains(event.target)) {
-        return;
-      }
-      handler(event);
-    };
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
-    return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
-    };
-  }, [ref, handler]);
 }
