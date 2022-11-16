@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Page Scroll*/
+body::-webkit-scrollbar{
+    width: 9px;
+    background-color: #2A2D34;
+}
+
+body::-webkit-scrollbar-track {
+  margin-top: 6rem;
+  background: hsl(0, 0%, 90%);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #2A2D34;
+}
+
+/* Scroll */
+html {
+    scroll-behavior: smooth;
+}

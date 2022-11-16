@@ -8,15 +8,29 @@ import i18next from "i18next";
 interface CertificatesProps {
   title: string;
   description: string;
+  image:string
 }
-
+function getImage(cardName:string){
+  switch (cardName) {
+    case "MTA 98-375":
+      return "/images/certificates/mta.png";
+    case "Helsinki University":
+    return "/images/certificates/helsinki.jpg";
+    case "Epic React":
+      return  "/images/languages/react.png";
+      case "Bachelor's degree":
+        return  "/images/certificates/fiap.png";
+    default:
+     return "/images/certificates/fiap.png";
+  }
+}
 export default function Certificates() {
   const { t } = useTranslation();
   const certificates: CertificatesProps[] = t("home:certificatesCards", {
     returnObjects: true,
   });
   return (
-    <Wrapper className="flex flex-col items-center justify-center">
+    <Wrapper className="flex flex-col items-center justify-center" id="certificates">
       <h3 className="mb-32 text-2xl text-primary">s</h3>
       <section className="flex flex-col gap-40 mt-16 lg:gap-12 lg:flex-row">
         {certificates.map((certificate, i) => (
@@ -28,7 +42,7 @@ export default function Certificates() {
               <Tilt>
                 <Image
                   alt={certificate.title}
-                  src="/images/certificates/fiap.png"
+                  src={getImage(certificate.title)}
                   width={120}
                   height={120}
                 />

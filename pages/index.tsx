@@ -9,6 +9,8 @@ import Certificates from "../components/Certificates";
 import Projects from "../components/Projects";
 import Recomendation from "../components/Recommendation";
 import ChatbotButton from "../components/chatbot/ChatbotButton";
+import Footer from "../components/Footer";
+import Introduction from "../components/Introduction";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -23,12 +25,14 @@ function Home(props: any) {
   return (
     <>
       <Layout>
+        <Introduction />
         <Languages />
         <Services />
         <Certificates />
         <Projects />
         <Recomendation />
         <ChatbotButton />
+        <Footer />
       </Layout>
     </>
   );
