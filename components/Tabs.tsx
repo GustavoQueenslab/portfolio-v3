@@ -4,11 +4,12 @@ import { useState } from "react";
 const tabs = [
   { id: 0, name: "Components" },
   { id: 1, name: "Articles" },
+  { id: 2, name: "Projects" },
 ];
 export default function Tabs({ actualCategory, stateChanger }) {
   return (
     <nav
-      className="flex -mb-px space-x-8 border-b border-gray-200"
+      className="flex mb-3 space-x-8 border-b border-gray-200"
       aria-label="Tabs"
     >
       {tabs.map((tab) => (

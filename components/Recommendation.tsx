@@ -1,12 +1,12 @@
 import Image from "next/image";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import Recommendations from "../lib/recomendations";
 import { useReducer } from "react";
 import Link from "next/link";
+import { recommendations } from "../lib/recomendations";
 
 function handleRecommendation(state, action) {
-  let recommendationLength = Recommendations.length - 1;
+  let recommendationLength = recommendations.length - 1;
   switch (action.type) {
     case "increment":
       if (state.position <= recommendationLength - 1) {
@@ -26,7 +26,7 @@ const initialState = { position: 0 };
 
 export default function Recommendation() {
   const [state, dispatch] = useReducer(handleRecommendation, initialState);
-  let currentReccomendation = Recommendations[state?.position];
+  let currentReccomendation = recommendations[state?.position];
   return (
     <section className="px-6 py-20 text-white lg:px-60 bg-secondary">
       <h3 className="text-center">Title</h3>

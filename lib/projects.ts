@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     id: 0,
     image: "/images/dhr.png",
@@ -30,5 +30,3 @@ const projects = [
     imageWidth: 177,
   },
 ];
-
-export default projects;

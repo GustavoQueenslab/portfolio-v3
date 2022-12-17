@@ -1,3 +1,7 @@
+import { articles } from "../lib/content/articles";
+import { components } from "../lib/content/components";
+import { projects } from "../lib/content/projects";
+import { ContentProps } from "./HorizontalContent";
 import HorizontalContent from "./HorizontalContentGroup";
 
 interface ContentListProps {
@@ -7,11 +11,13 @@ interface ContentListProps {
 function changeShowedCategory(actualCategory: number) {
   switch (actualCategory) {
     case 0:
-      return <HorizontalContent />;
+      return <HorizontalContent content={components} />;
     case 1:
-      return <p>232</p>;
+      return <HorizontalContent content={articles} />;
+    case 2:
+      return <HorizontalContent content={projects} />;
     default:
-      return <p>teste</p>;
+      return <HorizontalContent content={components} />;
   }
 }
 

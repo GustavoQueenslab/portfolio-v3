@@ -1,4 +1,4 @@
-const languagesMedias = [
+export const languagesMedias = [
   {
     id: 0,
     path: "/images/languages/html.png",
@@ -40,5 +40,3 @@ const languagesMedias = [
     name: "Git",
   },
 ];
-
-export default languagesMedias;

@@ -1,6 +1,6 @@
+import { languagesMedias } from "../lib/languages";
 import LanguageCard from "./LanguageCard";
 import Wrapper from "./Wrapper";
-import LanguagesImages from "../lib/languages";
 import { useState } from "react";
 
 export default function Languages() {
@@ -12,7 +12,7 @@ export default function Languages() {
         <p className="hidden text-xl text-primary lg:block">{description}</p>
       </article>
       <div className="grid grid-cols-2 mt-8 lg:mt-0 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-        {LanguagesImages.map((card) => (
+        {languagesMedias.map((card) => (
           <div
             key={card.id}
             onMouseEnter={() => setDescription(card.name)}
