@@ -1,6 +1,7 @@
 import { articles } from "../lib/content/articles";
 import { components } from "../lib/content/components";
 import { projects } from "../lib/content/projects";
+import ContentGridList from "./ContentGridList";
 import { ContentProps } from "./HorizontalContent";
 import HorizontalContent from "./HorizontalContentGroup";
 
@@ -11,7 +12,7 @@ interface ContentListProps {
 function changeShowedCategory(actualCategory: number) {
   switch (actualCategory) {
     case 0:
-      return <HorizontalContent content={components} />;
+      return <ContentGridList contentList={components} />;
     case 1:
       return <HorizontalContent content={articles} />;
     case 2:

@@ -8,7 +8,7 @@ export interface ContentProps {
   url: string;
 }
 
-function getCategoryColor(category: string) {
+export function getCategoryColor(category: string) {
   switch (category) {
     case "React":
       return "bg-blue-400";

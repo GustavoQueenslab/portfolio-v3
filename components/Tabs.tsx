@@ -1,11 +1,28 @@
 import clsx from "clsx";
 import { useState } from "react";
+import { components } from "../lib/content/components";
+import { articles } from "../lib/content/articles";
+import { projects } from "../lib/content/projects";
 
 const tabs = [
   { id: 0, name: "Components" },
   { id: 1, name: "Articles" },
   { id: 2, name: "Projects" },
 ];
+
+function getContentLength(tabIndex) {
+  switch (tabIndex) {
+    case 0:
+      return components.length;
+    case 1:
+      return articles.length;
+    case 2:
+      return projects.length;
+    default:
+      return 0;
+  }
+}
+
 export default function Tabs({ actualCategory, stateChanger }) {
   return (
     <nav
@@ -33,7 +50,7 @@ export default function Tabs({ actualCategory, stateChanger }) {
               "hidden ml-3 py-0.5 px-2.5 rounded-full text-xs font-medium md:inline-block"
             )}
           >
-            1
+            {getContentLength(tab.id)}
           </span>
         </button>
       ))}

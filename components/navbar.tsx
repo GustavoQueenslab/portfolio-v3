@@ -17,10 +17,6 @@ function getNavbarItems(route: string) {
 
 export default function Navbar() {
   const router = useRouter();
-  console.log(
-    "🚀 ~ file: Navbar.tsx ~ line 20 ~ Navbar ~ router",
-    router.pathname
-  );
   return (
     <nav className="sticky top-0 z-40 flex items-center justify-between h-24 px-10 py-4 text-white bg-secondary">
       <div className="flex items-center pl-3 text-3xl uppercase border-l-8 border-blue-400 lg:basis-2/5">
