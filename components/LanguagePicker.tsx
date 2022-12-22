@@ -17,7 +17,7 @@ export default function LanguagePicker({ className }: LanguagePickerProps) {
     <div className={clsx("w-36 ", className)} ref={languagePickerRef}>
       <LanguagePlaceholder event={() => setHandleDropdown(!handleDropdown)} />
       {handleDropdown && (
-        <div className="flex flex-col items-center mt-20">
+        <div className="flex flex-col items-center mt-4 lg:mt-20">
           <div className="w-3 -mt-2 overflow-hidden ">
             <div className="w-2 h-2 origin-bottom-left transform rotate-45 bg-white"></div>
           </div>

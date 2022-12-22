@@ -6,9 +6,10 @@ import { useRouter } from "next/router";
 interface NavbarItemProps {
   routeName: string;
   href?: string;
+  closeResponsiveMenu?:any
 }
 
-export default function NavbarItem({ routeName, href }: NavbarItemProps) {
+export default function NavbarItem({ routeName, href,closeResponsiveMenu }: NavbarItemProps) {
   const { t } = useTranslation();
   const samePageRedirect = `#${routeName}`;
   const getRedirectType = href ? href : samePageRedirect;
@@ -17,7 +18,7 @@ export default function NavbarItem({ routeName, href }: NavbarItemProps) {
 
   return (
     <Link href={getRedirectType}>
-      <p className="cursor-pointer ">
+      <p className="text-xl uppercase cursor-pointer" onClick={()=>{ closeResponsiveMenu ? closeResponsiveMenu(false) : null}}>
         {t(`${routeRemovedSlash}:${routeName}`)}
       </p>
     </Link>
