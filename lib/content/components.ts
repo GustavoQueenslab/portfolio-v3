@@ -18,7 +18,7 @@ export const components: ContentProps[] = [
          {
            title: "Rating",
            category: "React",
-           description: "aaaa",
+           description: "React component to ",
            url: "https://en.wikipedia.org/wiki/Next.js",
          },
          {
