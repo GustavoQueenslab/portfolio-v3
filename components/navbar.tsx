@@ -36,7 +36,7 @@ export default function Navbar() {
             Gustavo <span className="hidden lg:block">Ferreira</span>
           </p>
         </div>
-        <div className="justify-center hidden text-xl uppercase gap-44 lg:basis-full lg:flex">
+        <div className="justify-center hidden py-2 text-xl uppercase gap-44 lg:basis-full lg:flex">
           {getNavbarItems(router.pathname, null)}
         </div>
         <LanguagePicker className="hidden lg:block lg:basis-1/5" />
