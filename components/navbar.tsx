@@ -31,8 +31,8 @@ export default function Navbar() {
   return (
     <>
       <nav className="sticky top-0 z-40 flex items-center justify-between h-24 px-10 py-4 text-white bg-secondary">
-        <div className="flex items-center pl-3 text-3xl uppercase border-l-8 border-blue-400 lg:basis-2/5">
-          <p>
+        <div className="pl-3 text-3xl uppercase border-l-8 border-blue-400 lg:basis-2/5">
+          <p className="flex items-center gap-3">
             Gustavo <span className="hidden lg:block">Ferreira</span>
           </p>
         </div>

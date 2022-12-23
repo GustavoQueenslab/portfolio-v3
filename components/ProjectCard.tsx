@@ -47,13 +47,13 @@ export default function ProjectCard({
       {active && (
         <article>
           <TypeAnimation
-            className="text-2xl text-white"
+            className="text-2xl font-semibold text-white font-quicksand"
             cursor={false}
             sequence={[title]}
             speed={30}
             wrapper="p"
           />
-          <p className="mt-10 text-xl text-gray-400">{subtitle}</p>
+          <p className="mt-4 text-xl text-gray-400 lg:mt-10">{subtitle}</p>
         </article>
       )}
     </div>

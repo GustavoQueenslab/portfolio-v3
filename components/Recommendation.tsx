@@ -29,7 +29,9 @@ export default function Recommendation() {
   let currentReccomendation = recommendations[state?.position];
   return (
     <section className="px-6 py-20 text-white lg:px-60 bg-secondary">
-      <h3 className="text-center">Title</h3>
+      <h3 className="text-2xl font-bold text-center font-quicksand">
+        Recommendations
+      </h3>
       <section className="flex items-center gap-8 mt-16 lg:gap-24">
         <button
           className="h-20"

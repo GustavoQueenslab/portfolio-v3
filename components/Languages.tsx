@@ -8,7 +8,9 @@ export default function Languages() {
   return (
     <Wrapper className="flex flex-col items-center justify-center lg:flex-row">
       <article className="h-3 text-center basis-2/5">
-        <p className="text-2xl text-primary ">Competences</p>
+        <p className="text-3xl font-semibold text-primary font-quicksand">
+          Competences
+        </p>
         <p className="hidden text-xl text-primary lg:block">{description}</p>
       </article>
       <div className="grid grid-cols-2 mt-8 lg:mt-0 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">

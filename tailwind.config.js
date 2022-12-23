@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        quicksand: ["Quicksand", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+      },
       keyframes: {
         type: {
           "0%": { width: "0ch" },

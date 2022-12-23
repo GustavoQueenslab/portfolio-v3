@@ -44,7 +44,7 @@ export default function ServiceCategory({
       )}
     >
       {getIcons(index)}
-      <p className="text-xl font-bold">{title}</p>
+      <p className="text-xl font-bold font-quicksand">{title}</p>
       <p className="text-justify">{body}</p>
     </article>
   );
