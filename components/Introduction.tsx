@@ -7,7 +7,7 @@ export default function Introduction() {
         <p className="flex items-center text-5xl font-semibold font-quicksand lg:text-6xl">
           About me <span className="text-5xl text-tertiary">.</span>
         </p>
-        <p className="text-2xl text-justify">
+        <p className="text-2xl text-justify" id="competences">
           Hey!!! I&apos;m Gustavo Ferreira, a 19 years Front-End developer and a
           technology student. I develop modern, responsive and high quality
           interfaces. I currently live in Lisbon. See more about my projects and
