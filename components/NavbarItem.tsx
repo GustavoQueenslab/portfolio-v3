@@ -15,7 +15,6 @@ export default function NavbarItem({ routeName, href,closeResponsiveMenu }: Navb
   const getRedirectType = href ? href : samePageRedirect;
   const router = useRouter();
   const routeRemovedSlash = router.pathname.replace("/", "");
-console.log(href);
   return (
     <Link href={getRedirectType}>
       <p
