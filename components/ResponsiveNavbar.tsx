@@ -1,6 +1,6 @@
 import CloseIcon from "@mui/icons-material/Close";
 import { useRouter } from "next/router";
-import { getNavbarItems } from "./Navbar";
+import { getNavbarItems } from "./navbar";
 import LanguagePicker from "./LanguagePicker";
 
 export default function ResponsiveNavbar({ responsive, onCloseMenu }) {
