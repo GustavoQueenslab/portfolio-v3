@@ -1,9 +1,21 @@
 {
   "competences": "Competences",
   "projects": "Projects",
-  "contact": "Contact me",
-  "name": "Gustavo Ferreira",
+  "content": "Content",
   "certificates": "Certificates",
+  "aboutTitle": "About me",
+  "aboutBody": "Hey!!! I'm Gustavo Ferreira, a 19 years Front-End developer. I develop modern, responsive,acessible and high quality interfaces. I currently live in Lisbon. See more about my projects and don't forget to visit my social medias :)",
+  "competencesTitle":"Competences",
+  "competenceCards":[
+    {"name":"HTML","body": "HTML is the standard markup language for creating Web pages."},
+    {"name":"Css","body": "CSS is the language that is used to style a Web page."},
+    {"name":"React","body": "React is the most popular JavaScript library for building user interfaces."},
+    {"name":"Flutter","body": "Flutter is an open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, and the web from a single codebase"},
+    {"name":"Vue.js","body": "Vue.js is an open-source model–view–viewmodel front end JavaScript framework for building user interfaces and single-page applications."},
+    {"name":"Svelte","body": "Svelte is an open source javascript framework created to build fast and performatic interfaces"},
+    {"name":"Javascript","body": "Javascript is a programming language that is one of the core technologies of the web, alongside HTML and CSS. 98% of websites use JavaScript on the client side for webpages"},
+    {"name":"Git","body": "Git is a distributed version control system: tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development"}
+  ],
   "certificatesCards": [
     {
       "title": "Bachelor's degree",

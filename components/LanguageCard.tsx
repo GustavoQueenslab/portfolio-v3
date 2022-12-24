@@ -4,9 +4,10 @@ import { useState } from "react";
 interface LanguageCardProps {
   image: string;
   name: string;
+  body:string
 }
 
-export default function LanguageCard({ image, name }: LanguageCardProps) {
+export default function LanguageCard({ image, name,body }: LanguageCardProps) {
   const [showDescription, setShowDescription] = useState(false);
   return (
     <>

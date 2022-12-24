@@ -15,6 +15,7 @@ export default function NavbarItem({ routeName, href,closeResponsiveMenu }: Navb
   const getRedirectType = href ? href : samePageRedirect;
   const router = useRouter();
   const routeRemovedSlash = router.pathname.replace("/", "");
+  console.log(`${routeRemovedSlash}:${routeName}`);
   return (
     <Link href={getRedirectType}>
       <p
@@ -23,7 +24,7 @@ export default function NavbarItem({ routeName, href,closeResponsiveMenu }: Navb
           closeResponsiveMenu ? closeResponsiveMenu(false) : null;
         }}
       >
-        {t(`${routeRemovedSlash}:${routeName}`)}
+        {t(`home:${routeName}`)}
       </p>
     </Link>
   );
