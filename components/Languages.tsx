@@ -35,7 +35,6 @@ export default function Languages() {
   const competenceCards: CompetenceCardProps[] = t("home:competenceCards", {
     returnObjects: true,
   });
-  console.log(competenceCards);
   return (
     <Wrapper className="flex flex-col items-center justify-center lg:flex-row">
       <article className="h-3 text-center lg:pr-16 basis-2/5">

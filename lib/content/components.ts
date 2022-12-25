@@ -4,9 +4,8 @@ export const components: ContentProps[] = [
          {
            title: "Speedometer",
            category: "React",
-           description:
-             "This is an animated(or not) React component made with Tailwind to provide a good visual understanding of complex data",
-           url: "https://en.wikipedia.org/wiki/Next.js",
+           description: "",
+           url: "",
          },
          {
            title: "Stepper",

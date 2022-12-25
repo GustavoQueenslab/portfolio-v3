@@ -4,6 +4,10 @@ module.exports = {
   reactStrictMode: false,
   swcMinify: true,
   i18n,
+  env: {
+    STORYBLOK_ENDPOINT: process.env.STORYBLOK_ENDPOINT,
+    STORYBLOK_TOKEN: process.env.STORYBLOK_TOKEN,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
