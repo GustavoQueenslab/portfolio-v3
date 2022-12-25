@@ -17,5 +17,5 @@ export const storyblokQuery = async (query: string) => {
     method: "post",
     data: graphqlQuery,
   });
-  console.log(res.data.data ?? "There was en error");
+  return res.data.data ?? "There was en error";
 };

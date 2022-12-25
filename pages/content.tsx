@@ -2,9 +2,9 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Layout from "../components/Layout";
 import Footer from "../components/Footer";
 import Tabs from "../components/Tabs";
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import ContentList from "../components/ContentList";
-import { getContent } from "../lib/services/getContent";
+import { getContent } from "../lib/content/getContent";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -13,20 +13,23 @@ export async function getStaticProps({ locale }: any) {
     },
   };
 }
+export var ContentContext = createContext(null);
 function Content(props: any) {
   const [selectedCategory, setSelectedCategory] = useState(0);
+  const [content, setContent] = useState(null);
   useEffect(() => {
-    getContent(selectedCategory);
+    getContent(selectedCategory).then((res) => setContent(res));
   }, [selectedCategory]);
-
   return (
-    <Layout className="px-8 mt-8 lg:px-20">
-          <Tabs
-        actualCategory={selectedCategory}
-        stateChanger={setSelectedCategory}
-      />
-      <ContentList category={selectedCategory} />
-    </Layout>
+    <ContentContext.Provider value={content}>
+      <Layout className="px-8 mt-8 lg:px-20">
+        <Tabs
+          actualCategory={selectedCategory}
+          stateChanger={setSelectedCategory}
+        />
+        <ContentList category={selectedCategory} />
+      </Layout>
+    </ContentContext.Provider>
   );
 }
 

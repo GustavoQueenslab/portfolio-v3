@@ -1,18 +1,20 @@
+import { useContext } from "react";
 import { articles } from "../lib/content/articles";
 import { components } from "../lib/content/components";
 import { projects } from "../lib/content/projects";
 import ContentGridList from "./ContentGridList";
 import { ContentProps } from "./HorizontalContent";
 import HorizontalContent from "./HorizontalContentGroup";
+import { ContentContext } from "../pages/content";
 
 interface ContentListProps {
   category: number;
 }
 
-function changeShowedCategory(actualCategory: number) {
+function changeShowedCategory(actualCategory: number, content: any) {
   switch (actualCategory) {
     case 0:
-      return <ContentGridList contentList={components} />;
+      return <ContentGridList contentList={content} />;
     case 1:
       return <HorizontalContent content={articles} />;
     case 2:
@@ -23,5 +25,6 @@ function changeShowedCategory(actualCategory: number) {
 }
 
 export default function ContentList({ category }: ContentListProps) {
-  return changeShowedCategory(category);
+  const content = useContext(ContentContext);
+  return changeShowedCategory(category, content);
 }
