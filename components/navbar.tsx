@@ -40,11 +40,9 @@ export default function Navbar() {
           {getNavbarItems(router.pathname, null)}
         </div>
         <LanguagePicker className="hidden lg:block lg:basis-1/5" />
-        <MenuIcon
-          fontSize="large"
-          className="block lg:hidden"
-          onClick={() => setResponsive(true)}
-        />
+        <button className="block lg:hidden">
+          <MenuIcon fontSize="large" onClick={() => setResponsive(true)} />
+        </button>
       </nav>
       <ResponsiveNavbar responsive={responsive} onCloseMenu={setResponsive} />
     </>
