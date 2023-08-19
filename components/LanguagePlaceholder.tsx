@@ -1,6 +1,7 @@
-import { useTranslation } from "next-i18next";
 import Image from "next/image";
+
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useTranslation } from "next-i18next";
 
 interface LanguagePlaceholderProps {
   event: React.MouseEventHandler<HTMLButtonElement>;

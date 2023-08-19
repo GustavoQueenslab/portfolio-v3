@@ -1,7 +1,9 @@
-import { useTranslation } from "next-i18next";
-import Wrapper from "./Wrapper";
 import { useState } from "react";
+
+import { useTranslation } from "next-i18next";
+
 import LanguageCard from "./LanguageCard";
+import Wrapper from "./Wrapper";
 
 interface CompetenceCardProps {
   name: string;

@@ -1,8 +1,9 @@
-import CheckIcon from "@mui/icons-material/Check";
-import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import CheckIcon from "@mui/icons-material/Check";
+import { useTranslation } from "next-i18next";
 import useLocalStorage from "use-local-storage";
 
 interface LanguageOptionProps {
@@ -27,7 +28,7 @@ export default function LanguageOption({
       >
         <div className="flex items-center gap-2">
           <Image width={18} height={12} alt={language} src={flag} />
-          <p className="text-xs ">{language}</p>
+          <p className="text-xs">{language}</p>
         </div>
         {i18n.language == locale ? (
           <CheckIcon fontSize="small" color="success" />

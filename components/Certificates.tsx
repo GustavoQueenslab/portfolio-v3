@@ -1,7 +1,9 @@
-import Wrapper from "./Wrapper";
 import React from "react";
+
 import { useTranslation } from "next-i18next";
+
 import TiltedCard from "./TiltedCard";
+import Wrapper from "./Wrapper";
 
 export interface TiltedCardProps {
   title: string;

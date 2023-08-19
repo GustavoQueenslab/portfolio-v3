@@ -1,8 +1,11 @@
-import Wrapper from "./Wrapper";
+import Link from "next/link";
+
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import Link from "next/link";
+
+import Wrapper from "./Wrapper";
+
 export default function Footer() {
   return (
     <Wrapper className="px-8 pb-24 lg:pb-5 lg:px-36">

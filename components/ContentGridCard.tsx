@@ -1,7 +1,10 @@
-import clsx from "clsx";
-import { getCategoryColor } from "./HorizontalContent";
-import Link from "next/link";
 import { useState } from "react";
+
+import Link from "next/link";
+
+import clsx from "clsx";
+
+import { getCategoryColor } from "./HorizontalContent";
 
 export default function ContentGridCard({ content }) {
   const [hovered, setHovered] = useState(false);

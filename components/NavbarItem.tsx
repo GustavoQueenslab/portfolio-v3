@@ -1,7 +1,8 @@
-import { t } from "i18next";
-import { useTranslation } from "next-i18next";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+import { t } from "i18next";
+import { useTranslation } from "next-i18next";
 
 interface NavbarItemProps {
   routeName: string;

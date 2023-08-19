@@ -1,7 +1,9 @@
-import clsx from "clsx";
 import { useState } from "react";
-import { components } from "../lib/content/components";
+
+import clsx from "clsx";
+
 import { articles } from "../lib/content/articles";
+import { components } from "../lib/content/components";
 import { projects } from "../lib/content/projects";
 
 const tabs = [
@@ -37,7 +39,7 @@ export default function Tabs({ actualCategory, stateChanger }) {
             tab.id == actualCategory
               ? "border-tertiary text-tertiary"
               : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-200",
-            "whitespace-nowrap flex py-4 px-1 border-b-2  text-sm font-quicksand font-semibold"
+            "whitespace-nowrap flex py-4 px-1 border-b-2 text-sm font-quicksand font-semibold"
           )}
           aria-current={tab.id == actualCategory ? "page" : undefined}
         >

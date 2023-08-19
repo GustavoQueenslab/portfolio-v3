@@ -1,8 +1,11 @@
+import { useState } from "react";
+
 import { useRouter } from "next/router";
+
+import MenuIcon from "@mui/icons-material/Menu";
+
 import LanguagePicker from "./LanguagePicker";
 import NavbarItem from "./NavbarItem";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useState } from "react";
 import ResponsiveNavbar from "./ResponsiveNavbar";
 
 export function getNavbarItems(route: string, onCloseMenu) {

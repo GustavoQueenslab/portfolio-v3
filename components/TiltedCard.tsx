@@ -1,6 +1,7 @@
+import Image from "next/image";
+
 import { TiltedCardProps } from "./Certificates";
 import Tilt from "./Tilt";
-import Image from "next/image";
 function getImage(cardName: string) {
   switch (cardName) {
     case "MTA 98-375":

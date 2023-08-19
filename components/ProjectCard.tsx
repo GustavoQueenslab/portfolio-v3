@@ -1,6 +1,8 @@
-import clsx from "clsx";
-import Image from "next/image";
 import { useState } from "react";
+
+import Image from "next/image";
+
+import clsx from "clsx";
 import { TypeAnimation } from "react-type-animation";
 interface ProjectCardProps {
   title: string;
@@ -30,7 +32,7 @@ export default function ProjectCard({
   return (
     <div
       className={clsx(
-        "flex  flex-col gap-8 transition hover:opacity-80 px-7 py-8 w-80 h-[440px] bg-dhr ",
+        "flex flex-col gap-8 transition hover:opacity-80 px-7 py-8 w-80 h-[440px] bg-dhr",
         cardStyle(active)
       )}
       onMouseOver={() => setActive(true)}

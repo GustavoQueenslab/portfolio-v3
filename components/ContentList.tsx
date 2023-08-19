@@ -1,10 +1,11 @@
 import { useContext } from "react";
-import { articles } from "../lib/content/articles";
-import { components } from "../lib/content/components";
-import { projects } from "../lib/content/projects";
+
 import ContentGridList from "./ContentGridList";
 import { ContentProps } from "./HorizontalContent";
 import HorizontalContent from "./HorizontalContentGroup";
+import { articles } from "../lib/content/articles";
+import { components } from "../lib/content/components";
+import { projects } from "../lib/content/projects";
 import { ContentContext } from "../pages/content";
 
 interface ContentListProps {

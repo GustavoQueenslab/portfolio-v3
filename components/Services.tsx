@@ -1,5 +1,5 @@
-import { services } from "../lib/services";
 import ServiceCategory from "./ServiceCategory";
+import { services } from "../lib/services";
 
 export default function Services() {
   return (

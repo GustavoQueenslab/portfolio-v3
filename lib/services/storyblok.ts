@@ -1,4 +1,5 @@
 import axios from "axios";
+
 import { storyblok } from "../constants/api";
 export const storyblokQuery = async (query: string) => {
   const headers = {

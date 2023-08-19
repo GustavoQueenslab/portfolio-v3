@@ -1,9 +1,11 @@
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Layout from "../components/Layout";
-import Footer from "../components/Footer";
-import Tabs from "../components/Tabs";
 import { createContext, useEffect, useState } from "react";
+
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+
 import ContentList from "../components/ContentList";
+import Footer from "../components/Footer";
+import Layout from "../components/Layout";
+import Tabs from "../components/Tabs";
 import { getContent } from "../lib/content/getContent";
 
 export async function getStaticProps({ locale }: any) {

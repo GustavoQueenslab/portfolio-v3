@@ -1,5 +1,6 @@
-import clsx from "clsx";
 import { useState } from "react";
+
+import clsx from "clsx";
 import ReactStars from "react-rating-stars-component";
 
 export default function Rating() {

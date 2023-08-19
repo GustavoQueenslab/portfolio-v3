@@ -1,8 +1,11 @@
+import { useReducer } from "react";
+
 import Image from "next/image";
+import Link from "next/link";
+
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { useReducer } from "react";
-import Link from "next/link";
+
 import { recommendations } from "../lib/recomendations";
 
 function handleRecommendation(state, action) {
