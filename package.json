@@ -30,7 +30,7 @@
     "react-simple-chatbot": "^0.6.1",
     "react-type-animation": "^2.1.2",
     "react-vanilla-tilt": "^1.0.0",
-    "styled-components": "^5.3.6",
+    "styled-components": "^4.4.1",
     "use-local-storage": "^2.3.6"
   },
   "devDependencies": {
