@@ -6,7 +6,7 @@ import Link from "next/link";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
-import { recommendations } from "../lib/recomendations";
+import { recommendations } from "../../lib/recomendations";
 
 function handleRecommendation(state, action) {
   let recommendationLength = recommendations.length - 1;

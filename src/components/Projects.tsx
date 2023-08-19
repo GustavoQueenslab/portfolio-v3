@@ -1,5 +1,5 @@
 import ProjectCard from "./ProjectCard";
-import { projects } from "../lib/projects";
+import { projects } from "../../lib/projects";
 export default function Projects() {
   return (
     <section className="py-20 text-center" id="projects">

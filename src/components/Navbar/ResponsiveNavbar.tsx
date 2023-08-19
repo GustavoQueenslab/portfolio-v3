@@ -1,11 +1,11 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-import LanguagePicker from "./LanguagePicker";
-import { getNavbarItems } from "./navbar";
+import LanguagePicker from "../LanguagePicker";
 
-export default function ResponsiveNavbar({ responsive, onCloseMenu }) {
+export default function ResponsiveNavbar({ responsive, onCloseMenu, items }) {
   const router = useRouter();
   return (
     <>
@@ -18,9 +18,17 @@ export default function ResponsiveNavbar({ responsive, onCloseMenu }) {
               </div>
               <CloseIcon fontSize="large" onClick={() => onCloseMenu(false)} />
             </div>
-            <nav className="text-center mt-28">
+            <nav className="flex flex-col gap-4 text-center mt-28">
+              {items.map(({ href, label }) => (
+                <button
+                  className="text-xl uppercase cursor-pointer h-9 hover:border-l-0 hover:border-r-0 hover:border hover:border-t-0 hover:border-b-4"
+                  onClick={() => onCloseMenu(false)}
+                  key={href}
+                >
+                  <Link href={href}>{label}</Link>
+                </button>
+              ))}
               <ul className="flex flex-col items-center gap-16">
-                {getNavbarItems(router.pathname, onCloseMenu)}
                 <LanguagePicker className="lg:basis-1/5" />
               </ul>
             </nav>
