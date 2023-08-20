@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import Tilt from "../Tilt";
+import Tilt from "@/components/Tilt";
 
 interface CertificateItemProps {
   certificate: {
