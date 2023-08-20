@@ -25,7 +25,9 @@ const Footer = () => {
   return (
     <Wrapper className="px-8 pb-24 lg:pb-5 lg:px-36">
       <footer className="flex items-center justify-between text-primary">
-        <p className="text-xl text-left lg:block">Made by Gustavo Ferreira</p>
+        <p className="hidden text-xl text-left lg:block">
+          Made by Gustavo Ferreira
+        </p>
         <p className="text-xl text-left lg:hidden">@ {currentYear}</p>
         <section className="flex items-center gap-8 lg:gap-10">
           {socialMediaLinks.map((link) => (

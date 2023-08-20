@@ -2,13 +2,14 @@ import { useRef, useState } from "react";
 
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
-import Chatbot from "./Chatbot";
-import { useOnClickOutside } from "../../hooks/OnClickOutside";
+import Chatbot from "@/components/Chatbot";
+import { useOnClickOutside } from "@/hooks/OnClickOutside";
 
 export default function ChatbotButton() {
   const [chatBot, setChatBot] = useState(false);
   const chatBotRef = useRef(null);
   useOnClickOutside(chatBotRef, () => setChatBot(false));
+
   return (
     <div className="fixed bottom-0 right-0 z-50 mb-4 mx-9 lg:mx-14">
       {!chatBot && (
