@@ -2,7 +2,7 @@ import { useQueries } from "@tanstack/react-query";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Certificates from "@/components/Certificated";
-import ChatbotButton from "@/components/Chatbot/ChatbotButton";
+import ChatbotButton from "@/components/chatbot/ChatbotButton";
 import Competences from "@/components/Competences";
 import Footer from "@/components/Footer";
 import Introduction from "@/components/Introduction";

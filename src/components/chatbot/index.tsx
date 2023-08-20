@@ -1,7 +1,7 @@
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
-import CallPhoneButton from "@/components/Chatbot/CallPhoneButton";
+import CallPhoneButton from "@/components/chatbot/CallPhoneButton";
 import Rating from "@/components/Rating";
 
 function isValidName(value: string, name: string) {
