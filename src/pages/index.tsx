@@ -1,3 +1,4 @@
+import { useQueries } from "@tanstack/react-query";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Certificates from "@/components/Certificated";
@@ -9,6 +10,7 @@ import Layout from "@/components/Layout";
 import Projects from "@/components/Projects";
 import Recomendation from "@/components/Recommendation";
 import Services from "@/components/Services";
+import homeService from "@/services/home";
 
 export async function getStaticProps({ locale }: any) {
   return {
@@ -19,10 +21,18 @@ export async function getStaticProps({ locale }: any) {
 }
 
 function Home() {
+  const [aboutMe] = useQueries({
+    queries: [
+      {
+        queryKey: ["aboutMe"],
+        queryFn: homeService.getAboutMe,
+      },
+    ],
+  });
   return (
     <>
       <Layout>
-        <Introduction />
+        <Introduction introduction={aboutMe.data?.AboutmeItem.content} />
         <Competences />
         <Services />
         <Certificates />
