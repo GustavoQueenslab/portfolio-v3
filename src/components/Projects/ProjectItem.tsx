@@ -4,45 +4,39 @@ import Image from "next/image";
 
 import clsx from "clsx";
 import { TypeAnimation } from "react-type-animation";
+
+import { useOnClickOutside } from "@/hooks/OnClickOutside";
+
 interface ProjectCardProps {
-  title: string;
-  subtitle: string;
-  image: string;
-  background: string;
-  imageWidth: number;
-  imageHeight: number;
+  project: {
+    title: string;
+    subtitle: string;
+    image: string;
+    imageWidth: number;
+    imageHeight: number;
+  };
 }
 
-function cardStyle(active: boolean) {
-  if (!active) {
-    return "justify-center items-center";
-  }
-  return "text-justify break-all";
-}
-
-export default function ProjectCard({
-  title,
-  image,
-  subtitle,
-  imageWidth,
-  imageHeight,
-}: ProjectCardProps) {
+export default function ProjectITem({ project }: ProjectCardProps) {
   const [active, setActive] = useState(false);
+  const projectCardRef = useState(null);
+  useOnClickOutside(projectCardRef, () => setActive(false));
+
   return (
     <div
       className={clsx(
         "flex flex-col gap-8 transition hover:opacity-80 px-7 py-8 w-80 h-[440px] bg-dhr",
-        cardStyle(active)
+        active ? "text-justify break-all" : "justify-center items-center"
       )}
       onMouseOver={() => setActive(true)}
       onMouseOut={() => setActive(false)}
     >
       {!active && (
         <Image
-          src={image}
-          alt={title}
-          width={imageWidth}
-          height={imageHeight}
+          src={project.image}
+          alt={project.title}
+          width={project.imageWidth}
+          height={project.imageHeight}
         />
       )}
       {active && (
@@ -50,11 +44,13 @@ export default function ProjectCard({
           <TypeAnimation
             className="text-2xl font-semibold text-white font-quicksand"
             cursor={false}
-            sequence={[title]}
+            sequence={[project.title]}
             speed={30}
             wrapper="p"
           />
-          <p className="mt-4 text-xl text-gray-400 lg:mt-10">{subtitle}</p>
+          <p className="mt-4 text-xl text-gray-400 lg:mt-10">
+            {project.subtitle}
+          </p>
         </article>
       )}
     </div>

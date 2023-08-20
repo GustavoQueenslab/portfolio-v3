@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
 import Chatbot from "./Chatbot";
-import { useOnClickOutside } from "../hooks/OnClickOutside";
+import { useOnClickOutside } from "../../hooks/OnClickOutside";
 
 export default function ChatbotButton() {
   const [chatBot, setChatBot] = useState(false);

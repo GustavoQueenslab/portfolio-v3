@@ -6,7 +6,7 @@ import { useTranslation } from "next-i18next";
 import ReactCountryFlag from "react-country-flag";
 
 import LanguageItem from "./LanguageItem";
-import { useOnClickOutside } from "../hooks/OnClickOutside";
+import { useOnClickOutside } from "../../hooks/OnClickOutside";
 
 interface LanguagePickerProps {
   className?: string;
