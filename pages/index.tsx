@@ -18,7 +18,7 @@ export async function getStaticProps({ locale }: any) {
   };
 }
 
-function Home(props: any) {
+function Home() {
   return (
     <>
       <Layout>

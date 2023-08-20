@@ -1,12 +1,10 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 import CloseIcon from "@mui/icons-material/Close";
 
 import LanguagePicker from "../LanguagePicker";
 
 export default function ResponsiveNavbar({ responsive, onCloseMenu, items }) {
-  const router = useRouter();
   return (
     <>
       {responsive && (

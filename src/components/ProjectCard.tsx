@@ -24,7 +24,6 @@ export default function ProjectCard({
   title,
   image,
   subtitle,
-  background,
   imageWidth,
   imageHeight,
 }: ProjectCardProps) {

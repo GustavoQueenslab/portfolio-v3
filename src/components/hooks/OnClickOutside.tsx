@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
 // Hook reference:  https://usehooks.com/useOnClickOutside/
-export function useOnClickOutside(ref, handler: (event: Event) => void) {
+export function useOnClickOutside(ref, handler: () => void) {
   useEffect(() => {
     const listener = (event) => {
       if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
-      handler(event);
+      handler();
     };
     document.addEventListener("mousedown", listener);
     document.addEventListener("touchstart", listener);
