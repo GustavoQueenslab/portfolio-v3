@@ -1,12 +1,21 @@
 {
   "root": true,
-  "extends": ["next/core-web-vitals"],
-  "plugins": ["trim", "unused-imports", "@typescript-eslint/eslint-plugin"],
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@tanstack/eslint-plugin-query/recommended"
+  ],
+  "plugins": [
+    "trim",
+    "unused-imports",
+    "@typescript-eslint/eslint-plugin",
+    "@tanstack/query"
+  ],
   "rules": {
     "trim/class-name": "error",
     "unused-imports/no-unused-imports": "error",
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-vars": "error",
+    "react/react-in-jsx-scope": "off",
     "import/newline-after-import": ["error", { "count": 1 }],
     "no-restricted-imports": [
       "error",
