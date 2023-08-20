@@ -4,6 +4,7 @@ import { ThemeProvider } from "styled-components";
 
 import { checkStringAnswer } from "./UserTypingValidation";
 import Rating from "../Rating";
+
 export default function Chatbot() {
   const theme = {
     background: "#f5f8fb",
