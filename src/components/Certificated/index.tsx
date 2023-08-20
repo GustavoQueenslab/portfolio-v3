@@ -2,8 +2,8 @@ import React from "react";
 
 import { useTranslation } from "next-i18next";
 
-import TiltedCard from "./TiltedCard";
-import Wrapper from "./Wrapper";
+import CertificateItem from "@/components/Certificated/CertificateItem";
+import Wrapper from "@/components/Wrapper";
 
 export interface TiltedCardProps {
   title: string;
@@ -25,12 +25,7 @@ export default function Certificates() {
       </h3>
       <section className="flex flex-col gap-40 mt-16 lg:gap-12 lg:flex-row">
         {certificates.map((certificate, i) => (
-          <TiltedCard
-            key={i}
-            title={certificate.title}
-            description={certificate.description}
-            image={certificate.image}
-          />
+          <CertificateItem key={i} certificate={certificate} />
         ))}
       </section>
     </Wrapper>

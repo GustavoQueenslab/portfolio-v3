@@ -5,9 +5,11 @@ import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
 import clsx from "clsx";
 
 interface ServiceCategoryProps {
-  title: String;
-  body: String;
-  index?: number;
+  service: {
+    id: number;
+    title: string;
+    body: string;
+  };
 }
 const borderCombo = {
   cyan: "border-t-cyan-400 hover:border-b-cyan-400",
@@ -16,35 +18,28 @@ const borderCombo = {
   yellow: "border-t-yellow-400 hover:border-b-yellow-400",
   purple: "border-t-purple-400 hover:border-b-purple-400",
 };
-function getIcons(index: number) {
-  switch (index) {
-    case 0:
-      return <PhoneIphoneIcon color="inherit" fontSize="large" />;
-    case 1:
-      return <TerminalOutlinedIcon color="inherit" fontSize="large" />;
-    case 2:
-      return <AccessibilityOutlinedIcon color="inherit" fontSize="large" />;
-    case 3:
-      return <InsertChartOutlinedIcon color="inherit" fontSize="large" />;
-    default:
-      return <PhoneIphoneIcon color="inherit" fontSize="large" />;
-  }
-}
-export default function ServiceCategory({
-  title,
-  body,
-  index = 0,
-}: ServiceCategoryProps) {
+const iconComponents = [
+  PhoneIphoneIcon,
+  TerminalOutlinedIcon,
+  AccessibilityOutlinedIcon,
+  InsertChartOutlinedIcon,
+];
+export default function ServiceCategory({ service }: ServiceCategoryProps) {
+  const IconComponent = iconComponents[service.id - 1];
+  const borderClassColor =
+    borderCombo[Object.keys(borderCombo)[service.id - 1]];
   return (
     <article
       className={clsx(
         "flex flex-col gap-4 p-4 border border-t-4 border-b-4 border-b-transparent shadow-2xl hover:border-b-4 w-80 shadow-dark hover:border-t-transparent",
-        Object.values(borderCombo)[index]
+        borderClassColor
       )}
     >
-      {getIcons(index)}
-      <p className="text-xl font-bold font-quicksand">{title}</p>
-      <p className="text-justify">{body}</p>
+      <IconComponent color="inherit" fontSize="large" />
+      <p className="text-xl font-bold font-quicksand">
+        {`${service.id}. ${service.title}`}
+      </p>
+      <p className="text-justify">{service.body}</p>
     </article>
   );
 }

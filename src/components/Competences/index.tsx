@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "next-i18next";
 
 import LanguageCard from "./LanguageCard";
-import Wrapper from "./Wrapper";
+import Wrapper from "../Wrapper";
 
 interface CompetenceCardProps {
   name: string;
@@ -55,9 +55,8 @@ export default function Languages() {
             onMouseLeave={() => setDescription("")}
           >
             <LanguageCard
-              name={card.name}
-              body={card.body}
               image={getCompetenceImage(card.name)}
+              language={card}
             ></LanguageCard>
           </div>
         ))}
