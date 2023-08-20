@@ -1,6 +1,6 @@
 import ProjectCard from "@/components/Projects/ProjectItem";
 
-import { projects } from "../../../lib/projects";
+import { projects } from "../../lib/projects";
 
 export default function Projects() {
   return (
