@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import Image from "next/image";
 
-import { useOnClickOutside } from "../../hooks/OnClickOutside";
+import { useOnClickOutside } from "@/hooks/OnClickOutside";
 
 export default function LanguageCard({ language, image }) {
   const [showDescription, setShowDescription] = useState(false);
