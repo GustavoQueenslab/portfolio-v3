@@ -1,6 +1,7 @@
 import ProjectCard from "@/components/Projects/ProjectItem";
 
 import { projects } from "../../../lib/projects";
+
 export default function Projects() {
   return (
     <section className="py-20 text-center" id="projects">
