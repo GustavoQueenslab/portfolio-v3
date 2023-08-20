@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
-import Chatbot from "@/components/Chatbot";
+import Chatbot from "@/components/chatbot";
 import { useOnClickOutside } from "@/hooks/OnClickOutside";
 
 export default function ChatbotButton() {
