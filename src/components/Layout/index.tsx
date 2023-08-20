@@ -2,7 +2,7 @@ import React from "react";
 
 import clsx from "clsx";
 
-import Navbar from "../Navbar";
+import Navbar from "@/components/Navbar";
 
 interface LayoutProps {
   children?: React.ReactNode;

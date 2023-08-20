@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next";
 
-import AvatarPicker from "../Avatar";
+import AvatarPicker from "@/components/Avatar/index";
 
 export default function Introduction() {
   const { t } = useTranslation();

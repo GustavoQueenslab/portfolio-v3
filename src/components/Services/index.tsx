@@ -1,6 +1,5 @@
 import ServiceCategory from "@/components/Services/ServiceItem";
-
-import { services } from "../../lib/services";
+import { services } from "@/lib/services";
 
 export default function Services() {
   return (

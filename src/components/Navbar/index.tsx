@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
-import ResponsiveNavbar from "./ResponsiveNavbar";
-import LanguagePicker from "../LanguagePicker";
+import LanguagePicker from "@/components/LanguagePicker";
+import ResponsiveNavbar from "@/components/Navbar/ResponsiveNavbar";
 
 const LINK_ITEMS: { href: string; label: string }[] = [
   { href: "#competences", label: "Competences" },

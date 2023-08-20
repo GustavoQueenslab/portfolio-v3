@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import CloseIcon from "@mui/icons-material/Close";
 
-import LanguagePicker from "../LanguagePicker";
+import LanguagePicker from "@/components/LanguagePicker";
 
 export default function ResponsiveNavbar({ responsive, onCloseMenu, items }) {
   return (
