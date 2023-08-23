@@ -13,7 +13,14 @@ import Services from "@/components/Services";
 import homeService from "@/services/home";
 
 function Home() {
-  const [aboutMe, competences, services, certificates] = useQueries({
+  const [
+    aboutMe,
+    competences,
+    services,
+    certificates,
+    projects,
+    recommendations,
+  ] = useQueries({
     queries: [
       {
         queryKey: ["aboutMe"],
@@ -31,9 +38,16 @@ function Home() {
         queryKey: ["certificates"],
         queryFn: homeService.getCertificates,
       },
+      {
+        queryKey: ["projects"],
+        queryFn: homeService.getProjects,
+      },
+      {
+        queryKey: ["recommendations"],
+        queryFn: homeService.getRecommendations,
+      },
     ],
   });
-  console.log(certificates);
   return (
     <Layout>
       <Introduction introduction={aboutMe.data?.AboutmeItem.content} />
@@ -42,8 +56,10 @@ function Home() {
       <Certificates
         certificates={certificates.data?.CertificatesItem.content}
       />
-      <Projects />
-      <Recomendation />
+      <Projects projects={projects.data?.ProjectsItem.content} />
+      <Recomendation
+        recommendations={recommendations.data?.RecommendationsItem.content}
+      />
       <ChatbotButton />
       <Footer />
     </Layout>

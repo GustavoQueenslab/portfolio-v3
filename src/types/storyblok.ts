@@ -62,3 +62,42 @@ export interface CertificatesItem {
     alt: string;
   };
 }
+
+export interface Projects {
+  ProjectsItem: {
+    content: {
+      title: string;
+      items: ProjectsItem[];
+    };
+  };
+}
+
+export interface ProjectsItem {
+  _uid: string;
+  title: string;
+  description: string;
+  image: {
+    filename: string;
+    alt: string;
+  };
+}
+
+export interface Recommendations {
+  RecommendationsItem: {
+    content: {
+      title: string;
+      items: RecommendationsItem[];
+    };
+  };
+}
+
+export interface RecommendationsItem {
+  _uid: string;
+  title: string;
+  description: string;
+  link: string;
+  image: {
+    filename: string;
+    alt: string;
+  };
+}
