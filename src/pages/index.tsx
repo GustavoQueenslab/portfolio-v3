@@ -12,6 +12,62 @@ import Recomendation from "@/components/Recommendation";
 import Services from "@/components/Services";
 import homeService from "@/services/home";
 
+function Home() {
+  const [
+    aboutMe,
+    competences,
+    services,
+    certificates,
+    projects,
+    recommendations,
+  ] = useQueries({
+    queries: [
+      {
+        queryKey: ["aboutMe"],
+        queryFn: homeService.getAboutMe,
+      },
+      {
+        queryKey: ["competences"],
+        queryFn: homeService.getCompetences,
+      },
+      {
+        queryKey: ["services"],
+        queryFn: homeService.getServices,
+      },
+      {
+        queryKey: ["certificates"],
+        queryFn: homeService.getCertificates,
+      },
+      {
+        queryKey: ["projects"],
+        queryFn: homeService.getProjects,
+      },
+      {
+        queryKey: ["recommendations"],
+        queryFn: homeService.getRecommendations,
+      },
+    ],
+  });
+  return (
+    <Layout>
+      <Introduction introduction={aboutMe.data?.AboutmeItem.content} />
+      <Competences competences={competences.data?.CompetencesItem.content} />
+      <Services services={services.data?.ServicesItem.content} />
+      <Certificates
+        certificates={certificates.data?.CertificatesItem.content}
+      />
+      <Projects projects={projects.data?.ProjectsItem.content} />
+      <Recomendation
+        recommendations={recommendations.data?.RecommendationsItem.content}
+      />
+      <ChatbotButton />
+      <Footer />
+    </Layout>
+  );
+}
+
+export default Home;
+
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
@@ -19,30 +75,3 @@ export async function getStaticProps({ locale }: any) {
     },
   };
 }
-
-function Home() {
-  const [aboutMe] = useQueries({
-    queries: [
-      {
-        queryKey: ["aboutMe"],
-        queryFn: homeService.getAboutMe,
-      },
-    ],
-  });
-  return (
-    <>
-      <Layout>
-        <Introduction introduction={aboutMe.data?.AboutmeItem.content} />
-        <Competences />
-        <Services />
-        <Certificates />
-        <Projects />
-        <Recomendation />
-        <ChatbotButton />
-        <Footer />
-      </Layout>
-    </>
-  );
-}
-
-export default Home;

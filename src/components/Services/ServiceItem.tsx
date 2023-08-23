@@ -1,16 +1,7 @@
-import AccessibilityOutlinedIcon from "@mui/icons-material/AccessibilityOutlined";
-import InsertChartOutlinedIcon from "@mui/icons-material/InsertChartOutlined";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import TerminalOutlinedIcon from "@mui/icons-material/TerminalOutlined";
+import Image from "next/image";
+
 import clsx from "clsx";
 
-interface ServiceCategoryProps {
-  service: {
-    id: number;
-    title: string;
-    body: string;
-  };
-}
 const borderCombo = {
   cyan: "border-t-cyan-400 hover:border-b-cyan-400",
   red: "border-t-red-400 hover:border-b-red-400",
@@ -18,16 +9,9 @@ const borderCombo = {
   yellow: "border-t-yellow-400 hover:border-b-yellow-400",
   purple: "border-t-purple-400 hover:border-b-purple-400",
 };
-const iconComponents = [
-  PhoneIphoneIcon,
-  TerminalOutlinedIcon,
-  AccessibilityOutlinedIcon,
-  InsertChartOutlinedIcon,
-];
-export default function ServiceCategory({ service }: ServiceCategoryProps) {
-  const IconComponent = iconComponents[service.id - 1];
-  const borderClassColor =
-    borderCombo[Object.keys(borderCombo)[service.id - 1]];
+
+export default function ServiceCategory({ service }) {
+  const borderClassColor = borderCombo[Object.keys(borderCombo)[service.item]];
   return (
     <article
       className={clsx(
@@ -35,11 +19,18 @@ export default function ServiceCategory({ service }: ServiceCategoryProps) {
         borderClassColor
       )}
     >
-      <IconComponent color="inherit" fontSize="large" />
-      <p className="text-xl font-bold font-quicksand">
-        {`${service.id}. ${service.title}`}
-      </p>
-      <p className="text-justify">{service.body}</p>
+      <div>
+        <Image
+          src={service.icon.filename}
+          width={24}
+          height={24}
+          alt={service.icon.alt}
+        />
+        <p className="text-xl font-bold font-quicksand">
+          {`${service.item + 1}. ${service.title}`}
+        </p>
+      </div>
+      <p className="text-justify">{service.description}</p>
     </article>
   );
 }

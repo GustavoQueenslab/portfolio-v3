@@ -21,13 +21,13 @@ export default function LanguageCard({ language, image }) {
           <Image
             className={showDescription ? "rotate-[270deg]" : ""}
             src={image}
-            alt={language.name}
+            alt={language}
             height={100}
             width={100}
           />
         </div>
         <div className="h-4">
-          {showDescription && <p className="text-primary">{language.name}</p>}
+          {showDescription && <p className="text-primary">{language}</p>}
         </div>
       </div>
     </>

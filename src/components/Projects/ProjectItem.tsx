@@ -1,23 +1,11 @@
 import { useState } from "react";
 
-import Image from "next/image";
-
 import clsx from "clsx";
 import { TypeAnimation } from "react-type-animation";
 
 import { useOnClickOutside } from "@/hooks/OnClickOutside";
 
-interface ProjectCardProps {
-  project: {
-    title: string;
-    subtitle: string;
-    image: string;
-    imageWidth: number;
-    imageHeight: number;
-  };
-}
-
-export default function ProjectITem({ project }: ProjectCardProps) {
+export default function ProjectITem({ project }) {
   const [active, setActive] = useState(false);
   const projectCardRef = useState(null);
   useOnClickOutside(projectCardRef, () => setActive(false));
@@ -31,14 +19,7 @@ export default function ProjectITem({ project }: ProjectCardProps) {
       onMouseOver={() => setActive(true)}
       onMouseOut={() => setActive(false)}
     >
-      {!active && (
-        <Image
-          src={project.image}
-          alt={project.title}
-          width={project.imageWidth}
-          height={project.imageHeight}
-        />
-      )}
+      {!active && <img src={project.image.filename} alt={project.image.alt} />}
       {active && (
         <article>
           <TypeAnimation
@@ -49,7 +30,7 @@ export default function ProjectITem({ project }: ProjectCardProps) {
             wrapper="p"
           />
           <p className="mt-4 text-xl text-gray-400 lg:mt-10">
-            {project.subtitle}
+            {project.description}
           </p>
         </article>
       )}
