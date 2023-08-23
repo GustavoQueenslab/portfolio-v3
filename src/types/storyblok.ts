@@ -43,3 +43,22 @@ export interface ServicesItem {
     alt: string;
   };
 }
+
+export interface Certificates {
+  CertificatesItem: {
+    content: {
+      title: string;
+      items: CertificatesItem[];
+    };
+  };
+}
+
+export interface CertificatesItem {
+  _uid: string;
+  title: string;
+  description: string;
+  image: {
+    filename: string;
+    alt: string;
+  };
+}

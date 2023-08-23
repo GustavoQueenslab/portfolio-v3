@@ -1,7 +1,7 @@
 import { gql } from "graphql-request";
 
 export const competencesQuery = gql`
-  query getAboutMe($language: String) {
+  query getCompetences($language: String) {
     CompetencesItem(id: "358720922", language: $language) {
       content {
         _uid
