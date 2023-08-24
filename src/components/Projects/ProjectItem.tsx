@@ -21,7 +21,7 @@ export default function ProjectITem({ project }) {
     >
       {!active && <img src={project.image.filename} alt={project.image.alt} />}
       {active && (
-        <article>
+        <article className="mt-8">
           <TypeAnimation
             className="text-2xl font-semibold text-white font-quicksand"
             cursor={false}

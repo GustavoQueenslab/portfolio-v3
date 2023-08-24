@@ -1,7 +1,5 @@
 import { useRef, useState } from "react";
 
-import Image from "next/image";
-
 import { useOnClickOutside } from "@/hooks/OnClickOutside";
 
 enum MOOD_ITEMS {
@@ -28,14 +26,7 @@ export default function AvatarPicker() {
       onMouseOut={() => setAvatarMood(MOOD_ITEMS.HAPPY)}
       onClick={() => setAvatarMood(MOOD_ITEMS.NAUSEOUS)}
     >
-      <Image
-        alt="Avatar"
-        src={AVATAR_IMAGES[avatarMood]}
-        width={0}
-        height={0}
-        sizes="100vw"
-        style={{ width: "100%", height: "auto" }}
-      />
+      <img alt="Avatar" src={AVATAR_IMAGES[avatarMood]} />
     </div>
   );
 }

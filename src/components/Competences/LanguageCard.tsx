@@ -16,10 +16,10 @@ export default function LanguageCard({ language, image }) {
           ref={languageCardRef}
           onMouseEnter={() => setShowDescription(true)}
           onMouseLeave={() => setShowDescription(false)}
-          className="flex items-center justify-center transition duration-300 ease-in-out shadow-xl hover:opacity-40 duration-400 rounded-2xl w-36 h-36 bg-primary hover:rotate-90 hover:scale-75"
+          className="flex items-center justify-center transition duration-300 ease-in-out shadow-2xl shadow-black hover:opacity-40 duration-400 rounded-2xl w-36 h-36 bg-primary hover:scale-90"
         >
           <Image
-            className={showDescription ? "rotate-[270deg]" : ""}
+            className={showDescription ? "" : ""}
             src={image}
             alt={language}
             height={100}

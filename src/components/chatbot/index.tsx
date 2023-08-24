@@ -171,11 +171,13 @@ export default function Chatbot() {
     },
   ];
   return (
-    <ThemeProvider theme={theme}>
-      <ChatBot
-        botAvatar="https://avatars.githubusercontent.com/u/104764206?v=4"
-        steps={steps}
-      />
-    </ThemeProvider>
+    <section className="shadow-2xl">
+      <ThemeProvider theme={theme}>
+        <ChatBot
+          botAvatar="https://avatars.githubusercontent.com/u/104764206?v=4"
+          steps={steps}
+        />
+      </ThemeProvider>
+    </section>
   );
 }

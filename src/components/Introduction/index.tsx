@@ -7,14 +7,19 @@ export default function Introduction({ introduction }) {
       <div className="hidden lg:block basis-1/3">
         <AvatarPicker />
       </div>
-      <article className="flex flex-col gap-4 basis-2/3">
+      <article className="flex flex-col gap-4 mt-6 basis-2/3">
         <p className="flex items-center justify-center text-5xl font-semibold lg:justify-start font-quicksand lg:text-6xl">
           {introduction.title}
-          <span className="text-5xl text-tertiary">.</span>
+          <span className="ml-3 text-6xl text-tertiary">.</span>
         </p>
-        <p className="text-2xl text-justify" id="competences">
-          {introduction.description}
-        </p>
+        <div>
+          <p className="text-2xl text-justify" id="competences">
+            {introduction.description}
+          </p>
+          <p className="mt-1 text-lg font-bold hidden: lg:block text-tertiary">
+            ** Click on my avatar
+          </p>
+        </div>
       </article>
     </section>
   );

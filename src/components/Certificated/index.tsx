@@ -7,18 +7,19 @@ export default function Certificates({ certificates }) {
   if (!certificates) return <></>;
 
   return (
-    <Wrapper
-      className="flex flex-col items-center justify-center"
-      id="certificates"
-    >
-      <h3 className="mb-32 text-3xl font-semibold text-primary font-quicksand">
-        {certificates.title}
-      </h3>
-      <section className="flex flex-col gap-40 mt-16 lg:gap-12 lg:flex-row">
-        {certificates.items.map((certificate) => (
-          <CertificateItem key={certificate._uid} certificate={certificate} />
-        ))}
-      </section>
-    </Wrapper>
+    <section className="flex flex-col items-center">
+      <p className="text-3xl font-bold font-quicksand">{certificates.title}</p>
+      <div className="w-8 h-1 mt-1 bg-tertiary" />
+      <Wrapper
+        className="flex flex-col items-center justify-center mt-12"
+        id="certificates"
+      >
+        <section className="flex flex-col gap-40 mt-32 lg:gap-12 lg:flex-row">
+          {certificates.items.map((certificate) => (
+            <CertificateItem key={certificate._uid} certificate={certificate} />
+          ))}
+        </section>
+      </Wrapper>
+    </section>
   );
 }

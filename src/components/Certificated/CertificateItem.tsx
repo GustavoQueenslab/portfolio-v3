@@ -4,7 +4,10 @@ import Tilt from "@/components/Tilt";
 
 export default function CertificateItem({ certificate }) {
   return (
-    <div className="relative flex flex-col px-5 pt-10 pb-5 mb-8 text-center bg-black rounded-md lg:mb-0 w-80 text-primary">
+    <div
+      className="relative flex flex-col px-5 pt-10 pb-5 mb-8 text-center rounded-md shadow-2xl shadow-secondary-alpha bg-secondary-alpha lg:mb-0 w-80 text-primary"
+      id="projects"
+    >
       <div className="absolute flex items-center self-center text-center -top-32">
         <Tilt>
           <Image
@@ -17,7 +20,7 @@ export default function CertificateItem({ certificate }) {
       </div>
       <div>
         <p className="text-lg font-bold font-quicksand">{certificate.title}</p>
-        <p className="mt-4 text-justify break-all">{certificate.description}</p>
+        <p className="mt-4 text-center break-all">{certificate.description}</p>
       </div>
     </div>
   );

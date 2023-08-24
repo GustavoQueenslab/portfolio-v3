@@ -12,7 +12,7 @@ import Recomendation from "@/components/Recommendation";
 import Services from "@/components/Services";
 import homeService from "@/services/home";
 
-function Home() {
+export default function Home() {
   const [
     aboutMe,
     competences,
@@ -65,8 +65,6 @@ function Home() {
     </Layout>
   );
 }
-
-export default Home;
 
 export async function getStaticProps({ locale }: any) {
   return {

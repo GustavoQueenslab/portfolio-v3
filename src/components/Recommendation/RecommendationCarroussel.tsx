@@ -37,7 +37,7 @@ export default function RecommendationCarousel({ recommendations }) {
   }
 
   return (
-    <section className="flex items-center gap-8 mt-16 lg:gap-24">
+    <section className="flex items-center gap-8 lg:gap-24 min-h-[160px]">
       <button
         className="h-20"
         onClick={() => dispatch({ type: ACTIONS.DECREMENT })}
