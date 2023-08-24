@@ -33,11 +33,11 @@ module.exports = {
       colors: {
         primary: "#FFFFFF",
         secondary: "#2A2D34",
+        "secondary-alpha": "#17191c",
         tertiary: "#2574A9",
         dhr: "#3F4759",
         redare: "#1F2937",
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp")],
 };
