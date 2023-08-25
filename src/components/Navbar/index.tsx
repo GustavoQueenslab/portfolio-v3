@@ -3,17 +3,19 @@ import { useState } from "react";
 import Link from "next/link";
 
 import MenuIcon from "@mui/icons-material/Menu";
+import { useTranslation } from "next-i18next";
 
 import LanguagePicker from "@/components/LanguagePicker";
 import ResponsiveNavbar from "@/components/Navbar/ResponsiveNavbar";
 
-const LINK_ITEMS: { href: string; label: string }[] = [
-  { href: "#competences", label: "Competences" },
-  { href: "#projects", label: "Projects" },
-];
-
 export default function Navbar() {
   const [responsive, setResponsive] = useState(false);
+  const { t } = useTranslation("home");
+
+  const LINK_ITEMS: { href: string; label: string }[] = [
+    { href: "#competences", label: t("navbar.competences") },
+    { href: "#projects", label: t("navbar.projects") },
+  ];
 
   return (
     <>

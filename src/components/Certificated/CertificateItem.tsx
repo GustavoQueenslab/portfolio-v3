@@ -20,7 +20,7 @@ export default function CertificateItem({ certificate }) {
       </div>
       <div>
         <p className="text-lg font-bold font-quicksand">{certificate.title}</p>
-        <p className="mt-4 text-center break-all">{certificate.description}</p>
+        <p className="mt-4 text-center">{certificate.description}</p>
       </div>
     </div>
   );

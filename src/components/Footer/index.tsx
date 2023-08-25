@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { GitHub, Instagram, LinkedIn } from "@mui/icons-material";
+import { useTranslation } from "next-i18next";
 
 import Wrapper from "@/components/Wrapper";
 
@@ -20,13 +21,14 @@ const socialMediaLinks = [
 ];
 
 const Footer = () => {
+  const { t } = useTranslation("home");
   const currentYear = new Date().getFullYear();
 
   return (
     <Wrapper className="px-8 pb-24 lg:pb-5 lg:px-36">
       <footer className="flex items-center justify-between text-primary">
         <p className="hidden text-xl text-left lg:block">
-          Made by Gustavo Ferreira
+          {t("footer.author")}
         </p>
         <p className="text-xl text-left lg:hidden">@ {currentYear}</p>
         <section className="flex items-center gap-8 lg:gap-10">

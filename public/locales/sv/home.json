@@ -1,27 +1,12 @@
 {
-  "competences": "kompetens",
-  "projects": "projekten",
-  "contact": "Kontakt",
-  "name": "Gustavo Ferrfeira",
-  "certificates": "Certificates",
-  "certificatesCards": [
-    {
-      "title": "Bachelor's degree",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    },
-    {
-      "title": "MTA 98-375",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    },
-    {
-      "title": "MTA 98-384",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    },
-    {
-      "title": "Web course",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-    }
-  ],
-  "aboutTitle": "Om mig",
-  "aboutBody": "Tjena!!! Jag är Gustavo Ferreira, en 19-årig Front-End-utvecklare och en teknikstudent. Jag utvecklar moderna, lyhörda och högkvalitativa gränssnitt. Jag bor för närvarande i Lissabon. Se mer om mina projekt och besök mina sociala medier :)"
+  "navbar": {
+    "competences": "Kompetenser",
+    "projects": "Projekter"
+  },
+  "introduction": {
+    "clickAvatar": "** Klik på mit billede "
+  },
+  "footer": {
+    "author": "Made by Gustavo"
+  }
 }

@@ -29,7 +29,7 @@ export default function ProjectITem({ project }) {
             speed={30}
             wrapper="p"
           />
-          <p className="mt-4 text-xl text-gray-400 lg:mt-10">
+          <p className="mt-4 text-xl text-gray-400 break-normal text-start lg:mt-10">
             {project.description}
           </p>
         </article>

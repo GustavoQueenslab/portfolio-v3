@@ -1,26 +1,12 @@
 {
-  "competences": "Competências",
-  "projects": "Projetos",
-  "contact": "Contato",
-  "certificates": "Certificados",
-  "certificatesCards": [
-    {
-      "title": "Tecnologo",
-      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
-    },
-    {
-      "title": "MTA-98-375",
-      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
-    },
-    {
-      "title": "MTA 98-364",
-      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
-    },
-    {
-      "title": "Curso Web",
-      "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500"
-    }
-  ],
-  "aboutTitle": "Sobre mim",
-  "aboutBody": "Ei!!! Sou Gustavo Ferreira, desenvolvedor Front-End de 19 anos e estudante de engenharia. Desenvolvo interfaces modernas, responsivas e de alta qualidade. Atualmente vivo em Lisboa. Veja mais sobre meus projetos e visite minhas redes sociais :)"
+  "navbar": {
+    "competences": "Competências",
+    "projects": "Projetos"
+  },
+  "introduction": {
+    "clickAvatar": "** Clique no avatar"
+  },
+  "footer": {
+    "author": "Desenvolvido por Gustavo"
+  }
 }
