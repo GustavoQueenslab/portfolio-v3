@@ -1,9 +1,6 @@
-import { useTranslation } from "next-i18next";
-
 import AvatarPicker from "@/components/Avatar/index";
 
 export default function Introduction({ introduction }) {
-  const { t } = useTranslation("home");
   if (!introduction) return <></>;
   return (
     <section className="flex items-center justify-center gap-10 text-left lg:justify-between lg:px-40 my-14">
@@ -18,9 +15,6 @@ export default function Introduction({ introduction }) {
         <div>
           <p className="text-2xl text-justify" id="competences">
             {introduction.description}
-          </p>
-          <p className="hidden mt-1 text-lg font-bold lg:block text-tertiary">
-            {t("introduction.clickAvatar")}
           </p>
         </div>
       </article>

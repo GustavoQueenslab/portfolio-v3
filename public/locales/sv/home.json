@@ -8,5 +8,22 @@
   },
   "footer": {
     "author": "Made by Gustavo"
+  },
+  "chatbot": {
+    "introduction": "Hej!!! Vad heter du?",
+    "greetings": "Hej {{name}}, trevligt att träffa dig!",
+    "needHelp": "Vad behöver du hjälp med?",
+    "contactMe": "Kontakta mig",
+    "rateWebsite": "Betygsätt Hemsida",
+    "rateWebsiteMessage": "Det är bra att du vill betygsätta min portfölj!!",
+    "contactBy": "Föredrar du att kontakta mig via:",
+    "email": "E-post",
+    "phone": "Telefon",
+    "myNumber": "Mitt telefonnummer är {{number}}",
+    "waitReply": "Du kan skicka mig ett e-postmeddelande och jag kommer att kontakta dig inom 2 dagar.",
+    "options": "Vill du:",
+    "contactAgain": "Kontakta mig igen",
+    "quit": "Avsluta chatt",
+    "bye": "Tack! Vi ses snart :)"
   }
 }

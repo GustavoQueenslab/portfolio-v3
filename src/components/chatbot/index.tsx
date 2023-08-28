@@ -1,8 +1,11 @@
+import { useTranslation } from "next-i18next";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
 
 import CallPhoneButton from "@/components/chatbot/CallPhoneButton";
 import Rating from "@/components/Rating";
+
+import { PersonalData } from "../../lib/constants";
 
 function isValidName(value: string, name: string) {
   if (!isNaN(parseInt(value))) {
@@ -29,11 +32,12 @@ const theme = {
 };
 
 export default function Chatbot() {
+  const { t } = useTranslation("home");
   const steps = [
     //Get the user name
     {
       id: "1",
-      message: "Hey!!! What is your name?",
+      message: t("chatbot.introduction"),
       trigger: "2",
     },
     {
@@ -46,13 +50,13 @@ export default function Chatbot() {
     },
     {
       id: "3",
-      message: "Hi {previousValue}, nice to meet you!",
+      message: t("chatbot.greetings", { name: "{previousValue}" }),
       trigger: "4",
     },
     // Offer for help
     {
       id: 4,
-      message: "What do you need help with?",
+      message: t("chatbot.needHelp"),
       trigger: "help-categories",
     },
     {
@@ -60,12 +64,12 @@ export default function Chatbot() {
       options: [
         {
           value: "contact",
-          label: "Contact me",
+          label: t("chatbot.contactMe"),
           trigger: "5",
         },
         {
           value: "rate",
-          label: "Rate Website",
+          label: t("chatbot.rateWebsite"),
           trigger: "rate-portfolio-intro",
         },
       ],
@@ -73,7 +77,7 @@ export default function Chatbot() {
     //Rating
     {
       id: "rate-portfolio-intro",
-      message: "Great that you want to rate my portfolio!!",
+      message: t("chatbot.rateWebsiteMessage"),
       trigger: "stars",
     },
     {
@@ -83,7 +87,7 @@ export default function Chatbot() {
     //Contact
     {
       id: 5,
-      message: "Would you prefer to contact me by:",
+      message: t("chatbot.contactBy"),
       trigger: "contact-options",
     },
     {
@@ -91,12 +95,12 @@ export default function Chatbot() {
       options: [
         {
           value: "email",
-          label: "Email",
+          label: t("chatbot.email"),
           trigger: "contact-intro",
         },
         {
           value: "phone",
-          label: "Phone",
+          label: t("chatbot.phone"),
           trigger: "contact-phone",
         },
       ],
@@ -104,7 +108,7 @@ export default function Chatbot() {
     //Contact by phone number
     {
       id: "contact-phone",
-      message: "My phone number is +351 931 945 231",
+      message: t("chatbot.myNumber", { number: PersonalData.phoneNumber }),
       trigger: "call-button",
     },
     {
@@ -115,34 +119,20 @@ export default function Chatbot() {
     //Contact by email
     {
       id: "contact-intro",
-      message: "Tell me your email address please",
+      message: t("chatbot.waitReply"),
       trigger: "contact-email",
     },
     {
       id: "contact-email",
-      user: true,
-      trigger: "contact-email-body",
-    },
-    {
-      id: "contact-email-body",
-      message: "Great! So what do you want to talk?",
-      trigger: "contact-email-body-answer",
-    },
-    {
-      id: "contact-email-body-answer",
-      user: true,
-      trigger: "contact-email-reply",
-    },
-    {
-      id: "contact-email-reply",
-      message: "Great!! I will contact you within 2 days.",
-      trigger: "start-again",
+      component: (
+        <a href={"mailto:" + PersonalData.email}>{PersonalData.email}</a>
+      ),
     },
 
     //Restart chat
     {
       id: "start-again",
-      message: "Would you like to:",
+      message: t("chatbot.options"),
       trigger: "restart-chat",
     },
     {
@@ -150,24 +140,24 @@ export default function Chatbot() {
       options: [
         {
           value: "contact",
-          label: "Contact me again",
+          label: t("chatbot.contactAgain"),
           trigger: "contact-intro",
         },
         {
           value: "rate",
-          label: "Rate Website",
+          label: t("chatbot.rateWebsite"),
           trigger: "rate-portfolio-intro",
         },
         {
           value: "quit",
-          label: "End chat",
+          label: t("chatbot.quit"),
           trigger: "end-chat",
         },
       ],
     },
     {
       id: "end-chat",
-      message: "Thanks! See you soon :)",
+      message: t("chatbot.bye"),
     },
   ];
   return (

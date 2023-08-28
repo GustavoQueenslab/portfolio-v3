@@ -7,6 +7,23 @@
     "clickAvatar": "** Clique no avatar"
   },
   "footer": {
-    "author": "Desenvolvido por Gustavo"
+    "author": "Gjord av Gustavo"
+  },
+  "chatbot": {
+    "introduction": "Oi!!! Qual é o seu nome?",
+    "greetings": "Olá {{name}}, prazer em conhecê-lo(a)!",
+    "needHelp": "Com o que você precisa de ajuda?",
+    "contactMe": "Entre em contato",
+    "rateWebsite": "Avaliar Website",
+    "rateWebsiteMessage": "Ótimo que você queira avaliar meu portfólio!!",
+    "contactBy": "Você prefere entrar em contato por:",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "myNumber": "Meu número de telefone é {{number}}",
+    "waitReply": "Você pode me enviar um e-mail e eu entrarei em contato dentro de 2 dias.",
+    "options": "Você gostaria de:",
+    "contactAgain": "Entrar em contato novamente",
+    "quit": "Encerrar chat",
+    "bye": "Obrigado! Até logo :)"
   }
 }

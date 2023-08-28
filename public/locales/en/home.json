@@ -8,5 +8,22 @@
   },
   "footer": {
     "author": "Made by Gustavo"
+  },
+  "chatbot": {
+    "introduction": "Hey!!! What is your name?",
+    "greetings": "Hi {{name}}, nice to meet you!",
+    "needHelp": "What do you need help with?",
+    "contactMe": "Contact me",
+    "rateWebsite": "Rate Website",
+    "rateWebsiteMessage": "Great that you want to rate my portfolio!!",
+    "contactBy": "Would you prefer to contact me by:",
+    "email": "Email",
+    "phone": "Phone",
+    "myNumber": "My phone number is {{number}}",
+    "waitReply": "You can send me an email and I will contact you within 2 days. ",
+    "options": "Would you like to:",
+    "contactAgain": "Contact me again",
+    "quite": "End chat",
+    "bye": "Thanks! See you soon :)"
   }
 }

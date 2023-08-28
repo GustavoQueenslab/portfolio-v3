@@ -8,7 +8,7 @@ export default function CallButton() {
   return (
     <button
       onClick={handleCallClick}
-      className="flex items-center gap-3 justify-cente r text-semibold"
+      className="flex items-center justify-center gap-3 text-semibold"
     >
       <CallIcon />
       Call Number
