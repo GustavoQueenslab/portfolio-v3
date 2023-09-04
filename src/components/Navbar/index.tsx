@@ -35,7 +35,11 @@ export default function Navbar() {
           ))}
         </div>
         <LanguagePicker className="hidden lg:block lg:basis-1/5" />
-        <button className="block lg:hidden">
+        <button
+          className="block lg:hidden"
+          aria-label="Menu button"
+          title="Menu button"
+        >
           <MenuIcon fontSize="large" onClick={() => setResponsive(true)} />
         </button>
       </nav>

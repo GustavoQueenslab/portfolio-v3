@@ -9,6 +9,7 @@ import Competences from "@/components/Competences";
 import Footer from "@/components/Footer";
 import Introduction from "@/components/Introduction";
 import Layout from "@/components/Layout";
+import Metadata from "@/components/Metadata";
 import Projects from "@/components/Projects";
 import Recomendation from "@/components/Recommendation";
 import Services from "@/components/Services";
@@ -52,6 +53,7 @@ export default function Home() {
   });
   return (
     <Layout>
+      <Metadata />
       <Introduction introduction={aboutMe.data?.AboutmeItem.content} />
       <Competences competences={competences.data?.CompetencesItem.content} />
       <Services services={services.data?.ServicesItem.content} />

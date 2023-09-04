@@ -15,6 +15,8 @@ export default function ChatbotButton() {
       {!chatBot && (
         <button
           className="w-16 h-16 rounded-lg bg-tertiary"
+          aria-label="Chatbot button"
+          title="Chatbot button"
           onClick={() => setChatBot(true)}
         >
           <ChatBubbleOutlineIcon style={{ color: "white" }} />
